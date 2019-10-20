@@ -76,3 +76,22 @@ del students_dicts[1]
 print(students_dicts)
 print()
 print()
+
+# 클래스 구조
+# 구조 설계 후 재사용성 증가, 코드 반복 최소화가 되며, 이번에는 메소드를 활용해서 강력한 코드를 작성해보자
+
+class Student():
+    def __init__(self, name, number, grade, details):
+        self._name = name
+        self._number = number
+        self._grade = grade
+        self._details = details
+
+    def __str__(self):
+        return 'str : {}'.format(self._name)
+
+student1 = Student('kim', 1, 1, {'gender': 'Male', 'score1' : 95, 'score2' : 88})
+student2 = Student('Lee', 2, 2, {'gender': 'Female', 'score1' : 77, 'score2' : 92})
+student3 = Student('Park', 3, 4, {'gender': 'Male', 'score1' : 99, 'score2' : 100})
+
+print(student1.__dict__)
